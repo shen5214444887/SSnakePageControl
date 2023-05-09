@@ -1,0 +1,6 @@
+framework module SSnakePageControl {
+  umbrella header "SSnakePageControl-umbrella.h"
+
+  export *
+  module * { export * }
+}

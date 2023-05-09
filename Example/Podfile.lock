@@ -1,0 +1,16 @@
+PODS:
+  - SSnakePageControl (0.1.0)
+
+DEPENDENCIES:
+  - SSnakePageControl (from `../`)
+
+EXTERNAL SOURCES:
+  SSnakePageControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SSnakePageControl: c04ae4dd5f7d5a1d9edf19038a22d9a1ffc4cfa2
+
+PODFILE CHECKSUM: ad160f8281ebcd2ba41980934a927f99ce4d5b9e
+
+COCOAPODS: 1.12.0
