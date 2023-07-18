@@ -9,14 +9,14 @@
     "file": "LICENSE"
   },
   "authors": {
-    "m18201692330": "5214444887@163.com"
+    "xiaobei": "5214444887@163.com"
   },
   "source": {
     "git": "https://github.com/m18201692330/SSnakePageControl.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "9.0"
   },
   "source_files": "SSnakePageControl/Classes/**/*"
 }
