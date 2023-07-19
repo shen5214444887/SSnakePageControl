@@ -44,6 +44,16 @@ public class SSnakePageConfig: NSObject {
     /// 当前点的图片
     @objc public var currentImage: UIImage?
     
+    /// 未选中的 borderWidth
+    @objc public var normalBorderWidth: CGFloat = 1
+    /// 当前点的 borderWidth
+    @objc public var currentBorderWidth: CGFloat = 1
+    
+    /// 未选中的 borderColor
+    @objc public var normalBorderColor: UIColor?
+    /// 当前点的 borderColor
+    @objc public var currentBorderColor: UIColor?
+    
     /// 点的间距
     @objc public var spaces: CGFloat = 4
     

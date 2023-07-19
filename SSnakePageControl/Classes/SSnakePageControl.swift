@@ -205,9 +205,15 @@ private extension SSnakePageControl {
 fileprivate extension UIView {
     
     func setupNormal(config: SSnakePageConfig) {
+        self.backgroundColor = config.normalColor
         self.layer.masksToBounds = true
         self.layer.cornerRadius = config.normalCornerRadius
-        self.backgroundColor = config.normalColor
+        if let normalBorderColor = config.normalBorderColor {
+            self.layer.borderWidth = config.normalBorderWidth
+            self.layer.borderColor = normalBorderColor.cgColor
+        } else {
+            self.layer.borderWidth = 0
+        }
         
         if let normalImage = config.normalImage,
            let v = self.subviews.first as? UIImageView {
@@ -217,9 +223,15 @@ fileprivate extension UIView {
     }
     
     func setupCurrent(config: SSnakePageConfig) {
+        self.backgroundColor = config.currentColor
         self.layer.masksToBounds = true
         self.layer.cornerRadius = config.currentCornerRadius
-        self.backgroundColor = config.currentColor
+        if let currentBorderColor = config.currentBorderColor {
+            self.layer.borderWidth = config.currentBorderWidth
+            self.layer.borderColor = currentBorderColor.cgColor
+        } else {
+            self.layer.borderWidth = 0
+        }
         
         if let currentImage = config.currentImage,
            let v = self.subviews.first as? UIImageView {

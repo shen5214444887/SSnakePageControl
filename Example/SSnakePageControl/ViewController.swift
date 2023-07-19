@@ -65,6 +65,26 @@ class ViewController: UIViewController {
         v.numberOfPages = numberOfPages
         return v
     }()
+    private lazy var scrollView4: UIScrollView = {
+        return setupScrollView(orginY: 450)
+    }()
+    private lazy var pageControl4: SSnakePageControl = {
+        let v = SSnakePageControl(frame: CGRect(x: 0, y: (450 + height), width: width, height: pageH))
+        var config = SSnakePageConfig()
+        config.postionType = .center
+        config.normalSize = CGSize(width: 12, height: 12)
+        config.normalColor = UIColor.clear
+        config.normalBorderWidth = 2
+        config.normalBorderColor = UIColor.red
+        config.normalCornerRadius = 6
+        config.currentSize = CGSize(width: 16, height: 16)
+        config.currentColor = UIColor.red
+        config.currentCornerRadius = 8
+        config.spaces = 6
+        v.config = config
+        v.numberOfPages = numberOfPages
+        return v
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,10 +101,15 @@ private extension ViewController {
         
         view.addSubview(scrollView1)
         view.addSubview(pageControl1)
+        
         view.addSubview(scrollView2)
         view.addSubview(pageControl2)
+        
         view.addSubview(scrollView3)
         view.addSubview(pageControl3)
+        
+        view.addSubview(scrollView4)
+        view.addSubview(pageControl4)
     }
     
     func setupScrollView(orginY: CGFloat) -> UIScrollView {
@@ -115,6 +140,8 @@ extension ViewController: UIScrollViewDelegate {
                 pageControl2.currentPage = showIndex
             case scrollView3:
                 pageControl3.currentPage = showIndex
+            case scrollView4:
+                pageControl4.currentPage = showIndex
             default:
                 break
         }
