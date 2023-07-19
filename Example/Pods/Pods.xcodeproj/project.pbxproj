@@ -8,78 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		05BAF9CF8A8A4B2F794A8361D1D076D4 /* Pods-SSnakePageControl_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9522D193D58057CD62ABFEDEEF9A3B2B /* Pods-SSnakePageControl_Example-dummy.m */; };
-		0E3183535699A625992C4F83A40A3C35 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		11CE0E0768E897EA4E0EEA52C3A6DC5A /* Pods-SSnakePageControl_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 128A77A2A30BE1912EF8B1BCB155CAF0 /* Pods-SSnakePageControl_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2280C54096C1EF12B936542E39AAF6A8 /* SSnakePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8611AC0CB87F2969D76489B350CBC83 /* SSnakePageControl.swift */; };
+		2FC53F2EEA8A89B7AFC05A88B826357A /* SSnakePageConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5969CFBC7F26EC4EA8677D4CC1531FC /* SSnakePageConfig.swift */; };
 		3D310714F558E85407A0A095E7D6F89F /* Pods-SSnakePageControl_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C31B38B38701413F2998F1280B8DACA /* Pods-SSnakePageControl_Tests-dummy.m */; };
 		3EB78946873514FB9CE9AF410C5F5138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		6A2A543930A74428DE033E8C9770F35A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7C6F90A02D3AFA14E2529E793C98A7D3 /* SSnakePageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C73BCBA7DE902032BDB2740401A13607 /* SSnakePageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84CF89FB51A743617457CA3F943746C6 /* SSnakePageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C817919CC577DBEB0E70777B47765B3E /* SSnakePageControl-dummy.m */; };
-		99DC12BF6CC7E8D8DB8071035E1B6164 /* SSnakePageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD72A34F5866438B9E20F9FD39CA556B /* SSnakePageControl.swift */; };
 		9E6051C02178451DFA4762FC31D10478 /* Pods-SSnakePageControl_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 934C308D9FBD3A6F68E9F944FC27922E /* Pods-SSnakePageControl_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FBB3325C2A0A0F15000345EB /* SSnakePageConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB3325B2A0A0F15000345EB /* SSnakePageConfig.swift */; };
+		D960363472413E496E461D7B29F6FF74 /* SSnakePageControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5B7E8950B54DD9349F9F60184631DD /* SSnakePageControl-dummy.m */; };
+		DA34C1A1175BA835D59195B9F7A175B6 /* SSnakePageControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1AEDDFB0AE65139640DEF13C0F1756 /* SSnakePageControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E036A2B1E065AA56C9E532D223EBEA7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6977960F17A97190ECE7728D43C0F86E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8B810FAC2E80E2D5E6AB77A908F91DDD;
-			remoteInfo = SSnakePageControl;
-		};
-		C29C79DC8B4F823AAA92F5AFD3E14D42 /* PBXContainerItemProxy */ = {
+		58716F5BF3872A51521EAA7ABED3BD75 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 21945958CCC9DEF52269011761EEC9CD;
 			remoteInfo = "Pods-SSnakePageControl_Example";
 		};
+		6C95BEA971CABC6481989AE93E85073C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B810FAC2E80E2D5E6AB77A908F91DDD;
+			remoteInfo = SSnakePageControl;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		128A77A2A30BE1912EF8B1BCB155CAF0 /* Pods-SSnakePageControl_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SSnakePageControl_Tests-umbrella.h"; sourceTree = "<group>"; };
 		18790620602262DD87ACF413A33823E7 /* Pods-SSnakePageControl_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSnakePageControl_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		1B5BCB707F111FA85E96769978E4E6A7 /* SSnakePageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSnakePageControl-prefix.pch"; sourceTree = "<group>"; };
 		1B884A93BB50012CCF13E5E5BB0656BC /* Pods-SSnakePageControl_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSnakePageControl_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		1C0FD2B30A3C66C3B8C01F70848F2F48 /* SSnakePageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSnakePageControl.modulemap; sourceTree = "<group>"; };
 		1EA8B28827D9C1FBD36104866DF8CA41 /* Pods-SSnakePageControl_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SSnakePageControl_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		22141067AC825056195289F150D0E63B /* Pods-SSnakePageControl_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSnakePageControl_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		256B4A7137CE04FECC111EBC1B8046FA /* Pods-SSnakePageControl_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SSnakePageControl_Tests.modulemap"; sourceTree = "<group>"; };
-		2DAA2F04DA2AABFE80485698CEAD5A76 /* SSnakePageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSnakePageControl.release.xcconfig; sourceTree = "<group>"; };
 		31219B0ED5E864A904B2CEE1958619AB /* Pods-SSnakePageControl_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SSnakePageControl_Example"; path = Pods_SSnakePageControl_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4232756BB9E956B343910C6864708E89 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		449E3E137D74822D0F8C59E468682FE2 /* Pods-SSnakePageControl_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSnakePageControl_Example-Info.plist"; sourceTree = "<group>"; };
+		4625457053B0C501D7DBDBB039E0153C /* SSnakePageControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SSnakePageControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4D1AEDDFB0AE65139640DEF13C0F1756 /* SSnakePageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSnakePageControl-umbrella.h"; sourceTree = "<group>"; };
+		4E5B7E8950B54DD9349F9F60184631DD /* SSnakePageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSnakePageControl-dummy.m"; sourceTree = "<group>"; };
+		5719DE2E3AA7736810236591D42DF035 /* SSnakePageControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SSnakePageControl.modulemap; sourceTree = "<group>"; };
 		5C31B38B38701413F2998F1280B8DACA /* Pods-SSnakePageControl_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SSnakePageControl_Tests-dummy.m"; sourceTree = "<group>"; };
 		6084CCB45DA3D24233AB2D866D8627C8 /* Pods-SSnakePageControl_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SSnakePageControl_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6201A26828F7DA46E8CEC3961E8FC670 /* SSnakePageControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSnakePageControl-prefix.pch"; sourceTree = "<group>"; };
 		6D125AB0318CF272F3E2485BC235BF33 /* Pods-SSnakePageControl_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-SSnakePageControl_Tests"; path = Pods_SSnakePageControl_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71A1B864170E72BD5B4898D6CB018B5F /* SSnakePageControl */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSnakePageControl; path = SSnakePageControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DB8FFBD0E139B81CCA31AAEAAD9D5D /* Pods-SSnakePageControl_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SSnakePageControl_Tests-Info.plist"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		934C308D9FBD3A6F68E9F944FC27922E /* Pods-SSnakePageControl_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SSnakePageControl_Example-umbrella.h"; sourceTree = "<group>"; };
 		9522D193D58057CD62ABFEDEEF9A3B2B /* Pods-SSnakePageControl_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SSnakePageControl_Example-dummy.m"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		ABF1BA1E658FB6D136DCC143CE6F358A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A5969CFBC7F26EC4EA8677D4CC1531FC /* SSnakePageConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSnakePageConfig.swift; path = SSnakePageControl/Classes/SSnakePageConfig.swift; sourceTree = "<group>"; };
 		B2BECBB03D91C2FF70E515B845346840 /* Pods-SSnakePageControl_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSnakePageControl_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BBA8D8FD736AE566DA71A5AC082CEC80 /* Pods-SSnakePageControl_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSnakePageControl_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BD114A372E57582DD065AB8A76488779 /* SSnakePageControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSnakePageControl.release.xcconfig; sourceTree = "<group>"; };
 		C6D21BF6EF5C953D10A7DE6D4D0F133F /* Pods-SSnakePageControl_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SSnakePageControl_Example.modulemap"; sourceTree = "<group>"; };
-		C73BCBA7DE902032BDB2740401A13607 /* SSnakePageControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSnakePageControl-umbrella.h"; sourceTree = "<group>"; };
-		C817919CC577DBEB0E70777B47765B3E /* SSnakePageControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSnakePageControl-dummy.m"; sourceTree = "<group>"; };
-		CD44CB93779ECB95107D1EA43B255D84 /* SSnakePageControl.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SSnakePageControl.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D3600A69BD994F6D0B12CA7CDCEE0C86 /* SSnakePageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSnakePageControl-Info.plist"; sourceTree = "<group>"; };
-		D4BDD73D3F6DF0EFF08566706478689B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		DB54963FB6A304E132B84AAD0A1FB695 /* SSnakePageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSnakePageControl.debug.xcconfig; sourceTree = "<group>"; };
-		DD72A34F5866438B9E20F9FD39CA556B /* SSnakePageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSnakePageControl.swift; path = SSnakePageControl/Classes/SSnakePageControl.swift; sourceTree = "<group>"; };
+		C8611AC0CB87F2969D76489B350CBC83 /* SSnakePageControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSnakePageControl.swift; path = SSnakePageControl/Classes/SSnakePageControl.swift; sourceTree = "<group>"; };
+		DC29AC3651F39F2A2A1D88020E17D1C8 /* SSnakePageControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SSnakePageControl-Info.plist"; sourceTree = "<group>"; };
+		E40941CA88B03985BF6D773612F4C188 /* SSnakePageControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSnakePageControl.debug.xcconfig; sourceTree = "<group>"; };
+		E6DD6DF7D1F7188BF39C37FE6CCE47F5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F488C0AFEE6E72C15FBFAE6ABCB41A0E /* Pods-SSnakePageControl_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SSnakePageControl_Example.release.xcconfig"; sourceTree = "<group>"; };
 		FA85DF74774BAAECDEBC5611BA8559FA /* Pods-SSnakePageControl_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SSnakePageControl_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FBB3325B2A0A0F15000345EB /* SSnakePageConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SSnakePageConfig.swift; path = SSnakePageControl/Classes/SSnakePageConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		087FC64DB48C3549D67FBFE2DD41A33F /* Frameworks */ = {
+		47855A98F444345FAEED8D4790888000 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E3183535699A625992C4F83A40A3C35 /* Foundation.framework in Frameworks */,
+				E036A2B1E065AA56C9E532D223EBEA7D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,38 +102,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		03FC35294B62472C23EF24C7E3539554 /* Support Files */ = {
+		52720018CCB6F4BBF08625AC0597502A /* SSnakePageControl */ = {
 			isa = PBXGroup;
 			children = (
-				1C0FD2B30A3C66C3B8C01F70848F2F48 /* SSnakePageControl.modulemap */,
-				C817919CC577DBEB0E70777B47765B3E /* SSnakePageControl-dummy.m */,
-				D3600A69BD994F6D0B12CA7CDCEE0C86 /* SSnakePageControl-Info.plist */,
-				1B5BCB707F111FA85E96769978E4E6A7 /* SSnakePageControl-prefix.pch */,
-				C73BCBA7DE902032BDB2740401A13607 /* SSnakePageControl-umbrella.h */,
-				DB54963FB6A304E132B84AAD0A1FB695 /* SSnakePageControl.debug.xcconfig */,
-				2DAA2F04DA2AABFE80485698CEAD5A76 /* SSnakePageControl.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SSnakePageControl";
-			sourceTree = "<group>";
-		};
-		08469AD980BB309A20CF3467C2AAA1CB /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D4BDD73D3F6DF0EFF08566706478689B /* LICENSE */,
-				ABF1BA1E658FB6D136DCC143CE6F358A /* README.md */,
-				CD44CB93779ECB95107D1EA43B255D84 /* SSnakePageControl.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		39A8B82728C903E7E9768D36C0D4C7EB /* SSnakePageControl */ = {
-			isa = PBXGroup;
-			children = (
-				DD72A34F5866438B9E20F9FD39CA556B /* SSnakePageControl.swift */,
-				08469AD980BB309A20CF3467C2AAA1CB /* Pod */,
-				03FC35294B62472C23EF24C7E3539554 /* Support Files */,
-				FBB3325B2A0A0F15000345EB /* SSnakePageConfig.swift */,
+				A5969CFBC7F26EC4EA8677D4CC1531FC /* SSnakePageConfig.swift */,
+				C8611AC0CB87F2969D76489B350CBC83 /* SSnakePageControl.swift */,
+				62AF8ABEF89005F2FC9111ECEF7FCA3F /* Pod */,
+				6AFBF689740223D72CF2F19A0351416B /* Support Files */,
 			);
 			name = SSnakePageControl;
 			path = ../..;
@@ -147,12 +122,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5C03B6443912B5CD76644C00C2369BEC /* Development Pods */ = {
+		62AF8ABEF89005F2FC9111ECEF7FCA3F /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				39A8B82728C903E7E9768D36C0D4C7EB /* SSnakePageControl */,
+				4232756BB9E956B343910C6864708E89 /* LICENSE */,
+				E6DD6DF7D1F7188BF39C37FE6CCE47F5 /* README.md */,
+				4625457053B0C501D7DBDBB039E0153C /* SSnakePageControl.podspec */,
 			);
-			name = "Development Pods";
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		6AFBF689740223D72CF2F19A0351416B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5719DE2E3AA7736810236591D42DF035 /* SSnakePageControl.modulemap */,
+				4E5B7E8950B54DD9349F9F60184631DD /* SSnakePageControl-dummy.m */,
+				DC29AC3651F39F2A2A1D88020E17D1C8 /* SSnakePageControl-Info.plist */,
+				6201A26828F7DA46E8CEC3961E8FC670 /* SSnakePageControl-prefix.pch */,
+				4D1AEDDFB0AE65139640DEF13C0F1756 /* SSnakePageControl-umbrella.h */,
+				E40941CA88B03985BF6D773612F4C188 /* SSnakePageControl.debug.xcconfig */,
+				BD114A372E57582DD065AB8A76488779 /* SSnakePageControl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SSnakePageControl";
 			sourceTree = "<group>";
 		};
 		8DDC34CC2C6A6EC8E26898688F368DEE /* Targets Support Files */ = {
@@ -207,11 +199,19 @@
 			path = "Target Support Files/Pods-SSnakePageControl_Tests";
 			sourceTree = "<group>";
 		};
+		C71D532738C38039B1D8AEAED52848FB /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52720018CCB6F4BBF08625AC0597502A /* SSnakePageControl */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				5C03B6443912B5CD76644C00C2369BEC /* Development Pods */,
+				C71D532738C38039B1D8AEAED52848FB /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				B31413B8128FA83939FF4EEAB592AC17 /* Products */,
 				8DDC34CC2C6A6EC8E26898688F368DEE /* Targets Support Files */,
@@ -245,11 +245,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B052BCAB96B7EF49F37548239D8D1856 /* Headers */ = {
+		CFD7B577C440C5B74EFF70F044805C90 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C6F90A02D3AFA14E2529E793C98A7D3 /* SSnakePageControl-umbrella.h in Headers */,
+				DA34C1A1175BA835D59195B9F7A175B6 /* SSnakePageControl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +268,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				9677820792EDF831C260019E8C432276 /* PBXTargetDependency */,
+				D611F7275EDABC9B573298ECCBF4EFE3 /* PBXTargetDependency */,
 			);
 			name = "Pods-SSnakePageControl_Tests";
 			productName = Pods_SSnakePageControl_Tests;
@@ -287,7 +287,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				F6C42138FBA09F9EF01EB4749B59F6B3 /* PBXTargetDependency */,
+				85805E78964F9E8ABFA1B67DF0570104 /* PBXTargetDependency */,
 			);
 			name = "Pods-SSnakePageControl_Example";
 			productName = Pods_SSnakePageControl_Example;
@@ -296,12 +296,12 @@
 		};
 		8B810FAC2E80E2D5E6AB77A908F91DDD /* SSnakePageControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B32AA0F0922F43696F88E4992A30A927 /* Build configuration list for PBXNativeTarget "SSnakePageControl" */;
+			buildConfigurationList = 2D42FA1D1FCE2A276D4E86008E4AE163 /* Build configuration list for PBXNativeTarget "SSnakePageControl" */;
 			buildPhases = (
-				B052BCAB96B7EF49F37548239D8D1856 /* Headers */,
-				F9AF3C8995E5D19D1E8DCFE0E8B941ED /* Sources */,
-				087FC64DB48C3549D67FBFE2DD41A33F /* Frameworks */,
-				B9CB01AAB3478F04A47435673FF48D8A /* Resources */,
+				CFD7B577C440C5B74EFF70F044805C90 /* Headers */,
+				6CDCC6A354C8FE776999CA6F4835B4D5 /* Sources */,
+				47855A98F444345FAEED8D4790888000 /* Frameworks */,
+				4E9EF8273A49E20C85B3FD3C471B87C3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -342,6 +342,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4E9EF8273A49E20C85B3FD3C471B87C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F11C84CC32485C49C531C0DBBD18F8D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,16 +363,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B9CB01AAB3478F04A47435673FF48D8A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6CDCC6A354C8FE776999CA6F4835B4D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FC53F2EEA8A89B7AFC05A88B826357A /* SSnakePageConfig.swift in Sources */,
+				2280C54096C1EF12B936542E39AAF6A8 /* SSnakePageControl.swift in Sources */,
+				D960363472413E496E461D7B29F6FF74 /* SSnakePageControl-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C984CC03C03376B8AD3DC3A710516445 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,34 +392,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9AF3C8995E5D19D1E8DCFE0E8B941ED /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FBB3325C2A0A0F15000345EB /* SSnakePageConfig.swift in Sources */,
-				99DC12BF6CC7E8D8DB8071035E1B6164 /* SSnakePageControl.swift in Sources */,
-				84CF89FB51A743617457CA3F943746C6 /* SSnakePageControl-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9677820792EDF831C260019E8C432276 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-SSnakePageControl_Example";
-			target = 21945958CCC9DEF52269011761EEC9CD /* Pods-SSnakePageControl_Example */;
-			targetProxy = C29C79DC8B4F823AAA92F5AFD3E14D42 /* PBXContainerItemProxy */;
-		};
-		F6C42138FBA09F9EF01EB4749B59F6B3 /* PBXTargetDependency */ = {
+		85805E78964F9E8ABFA1B67DF0570104 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SSnakePageControl;
 			target = 8B810FAC2E80E2D5E6AB77A908F91DDD /* SSnakePageControl */;
-			targetProxy = 6977960F17A97190ECE7728D43C0F86E /* PBXContainerItemProxy */;
+			targetProxy = 6C95BEA971CABC6481989AE93E85073C /* PBXContainerItemProxy */;
+		};
+		D611F7275EDABC9B573298ECCBF4EFE3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SSnakePageControl_Example";
+			target = 21945958CCC9DEF52269011761EEC9CD /* Pods-SSnakePageControl_Example */;
+			targetProxy = 58716F5BF3872A51521EAA7ABED3BD75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		77D59096D65CBF5CBE2CE192F39F600B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD114A372E57582DD065AB8A76488779 /* SSnakePageControl.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSnakePageControl/SSnakePageControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSnakePageControl/SSnakePageControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSnakePageControl/SSnakePageControl.modulemap";
+				PRODUCT_MODULE_NAME = SSnakePageControl;
+				PRODUCT_NAME = SSnakePageControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,15 +496,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		8C6834E3417A20CEA516BDFC8FC7C1E6 /* Debug */ = {
+		818B04C85B4343E1FA7C2E5B0BEE5FAB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB54963FB6A304E132B84AAD0A1FB695 /* SSnakePageControl.debug.xcconfig */;
+			baseConfigurationReference = E40941CA88B03985BF6D773612F4C188 /* SSnakePageControl.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -533,37 +565,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		A48B9D39ECD30C94ED87A2B0260EE714 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DAA2F04DA2AABFE80485698CEAD5A76 /* SSnakePageControl.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SSnakePageControl/SSnakePageControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SSnakePageControl/SSnakePageControl-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SSnakePageControl/SSnakePageControl.modulemap";
-				PRODUCT_MODULE_NAME = SSnakePageControl;
-				PRODUCT_NAME = SSnakePageControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		CEA4A2E514A54CB6C289FCBDB19B1B7B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -735,6 +736,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2D42FA1D1FCE2A276D4E86008E4AE163 /* Build configuration list for PBXNativeTarget "SSnakePageControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				818B04C85B4343E1FA7C2E5B0BEE5FAB /* Debug */,
+				77D59096D65CBF5CBE2CE192F39F600B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -758,15 +768,6 @@
 			buildConfigurations = (
 				D368E281C829F5380A7726A8116A85C1 /* Debug */,
 				D16C2FF314BC4EC4D9CDC2C7F0E4EEC0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B32AA0F0922F43696F88E4992A30A927 /* Build configuration list for PBXNativeTarget "SSnakePageControl" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8C6834E3417A20CEA516BDFC8FC7C1E6 /* Debug */,
-				A48B9D39ECD30C94ED87A2B0260EE714 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

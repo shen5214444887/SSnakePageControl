@@ -7,21 +7,21 @@
 
 import UIKit
 
-@objc protocol SSnakePageControlDelegate: NSObjectProtocol {
+@objc public protocol SSnakePageControlDelegate: NSObjectProtocol {
     func pageControl(pageControl: SSnakePageControl, didClick index: Int)
 }
 
-class SSnakePageControl: UIView {
+public class SSnakePageControl: UIView {
     
-    @objc weak var delegate: SSnakePageControlDelegate?
+    @objc public weak var delegate: SSnakePageControlDelegate?
     /// 配置项
-    @objc var config = SSnakePageConfig() {
+    @objc public var config = SSnakePageConfig() {
         didSet {
             setupUI()
         }
     }
     /// 当前点所在下标
-    @objc var currentPage: Int = 0 {
+    @objc public var currentPage: Int = 0 {
         willSet(newValue) {
             delegate?.pageControl(pageControl: self, didClick: newValue)
             if newValue == self.currentPage || newValue > numberOfPages {
@@ -31,7 +31,7 @@ class SSnakePageControl: UIView {
         }
     }
     /// 总的分页数量
-    @objc var numberOfPages: Int = 0 {
+    @objc public var numberOfPages: Int = 0 {
         didSet {
             setupUI()
         }
@@ -41,7 +41,7 @@ class SSnakePageControl: UIView {
     private var isLayoutSubviews: Bool = false
     private let tagHead: Int = 1000
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
     }
@@ -50,7 +50,7 @@ class SSnakePageControl: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
         
         if !isLayoutSubviews {
@@ -103,15 +103,12 @@ private extension SSnakePageControl {
             if page == 0 {
                 let currPointView = UIView(frame: CGRect(x: startX, y: startY, width: config.currentSize.width, height: config.currentSize.height))
                 currPointView.tag = page + tagHead
-                currPointView.layer.masksToBounds = true
-                currPointView.layer.cornerRadius = config.currentCornerRadius
-                currPointView.backgroundColor = config.currentColor
+                
+                startX = CGRectGetMaxX(currPointView.frame) + config.spaces
                 
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction(_:)))
                 currPointView.addGestureRecognizer(tapGesture)
                 addSubview(currPointView)
-                
-                startX = CGRectGetMaxX(currPointView.frame) + config.spaces
                 
                 if let currentImage = config.currentImage {
                     let v = UIImageView(frame: currPointView.bounds)
@@ -120,18 +117,16 @@ private extension SSnakePageControl {
                     v.contentMode = .scaleAspectFill
                     currPointView.addSubview(v)
                 }
+                currPointView.setupCurrent(config: config)
             } else {
                 let otherPointView = UIView(frame: CGRect(x: startX, y: startY, width: config.normalSize.width, height: config.normalSize.height))
                 otherPointView.tag = page + tagHead
-                otherPointView.layer.masksToBounds = true
-                otherPointView.layer.cornerRadius = config.normalCornerRadius
-                otherPointView.backgroundColor = config.normalColor
+                
+                startX = CGRectGetMaxX(otherPointView.frame) + config.spaces
                 
                 let tapGesture = UITapGestureRecognizer(target: self, action: #selector(clickAction(_:)))
                 otherPointView.addGestureRecognizer(tapGesture)
                 addSubview(otherPointView)
-                
-                startX = CGRectGetMaxX(otherPointView.frame) + config.spaces
                 
                 if let normalImage = config.normalImage {
                     let v = UIImageView(frame: otherPointView.bounds)
@@ -140,6 +135,7 @@ private extension SSnakePageControl {
                     v.contentMode = .scaleAspectFill
                     otherPointView.addSubview(v)
                 }
+                otherPointView.setupNormal(config: config)
             }
         }
     }
@@ -150,34 +146,22 @@ private extension SSnakePageControl {
               let newView = viewWithTag(new + tagHead) else {
             return
         }
-        oldView.backgroundColor = config.normalColor
-        newView.backgroundColor = config.currentColor
         
         UIView.animate(withDuration: config.changeAnimateDuration) {
             // 单个滚动
             var lx = oldView.frame.origin.x
             if new < old {
-                lx += self.config.currentSize.width
-                lx -= (self.config.currentSize.width - self.config.normalSize.width) * 0.5
+                lx += (self.config.currentSize.width - self.config.normalSize.width)
             }
             oldView.frame = CGRect(x: lx, y: oldView.frame.origin.y, width: self.config.normalSize.width, height: self.config.normalSize.height)
-            if let normalImage = self.config.normalImage,
-               let v = oldView.subviews.first as? UIImageView {
-                v.frame = oldView.bounds
-                v.image = normalImage
-            }
+            oldView.setupNormal(config: self.config)
             
             var mx = newView.frame.origin.x
             if new > old {
-                mx -= self.config.currentSize.width
-                mx += (self.config.currentSize.width - self.config.normalSize.width) * 0.5
+                mx -= (self.config.currentSize.width - self.config.normalSize.width)
             }
-            newView.frame = CGRect(x: mx, y: newView.frame.origin.x, width: self.config.currentSize.width, height: self.config.normalSize.height)
-            if let currentImage = self.config.currentImage,
-               let v = newView.subviews.first as? UIImageView {
-                v.frame = newView.bounds
-                v.image = currentImage
-            }
+            newView.frame = CGRect(x: mx, y: newView.frame.origin.y, width: self.config.currentSize.width, height: self.config.currentSize.height)
+            newView.setupCurrent(config: self.config)
             
             // 越过点击
             var head: Int?
@@ -201,13 +185,36 @@ private extension SSnakePageControl {
                     mx -= self.config.normalSize.width
                     mx -= (self.config.currentSize.width - self.config.normalSize.width) * 0.5
                     ms.frame = CGRect(x: mx, y: ms.frame.origin.y, width: self.config.normalSize.width, height: self.config.normalSize.height)
-                    if let normalImage = self.config.normalImage,
-                       let v = ms.subviews.first as? UIImageView {
-                        v.frame = ms.bounds
-                        v.image = normalImage
-                    }
+                    ms.setupNormal(config: self.config)
                 }
             }
+        }
+    }
+}
+
+fileprivate extension UIView {
+    
+    func setupNormal(config: SSnakePageConfig) {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = config.normalCornerRadius
+        self.backgroundColor = config.normalColor
+        
+        if let normalImage = config.normalImage,
+           let v = self.subviews.first as? UIImageView {
+            v.frame = self.bounds
+            v.image = normalImage
+        }
+    }
+    
+    func setupCurrent(config: SSnakePageConfig) {
+        self.layer.masksToBounds = true
+        self.layer.cornerRadius = config.currentCornerRadius
+        self.backgroundColor = config.currentColor
+        
+        if let currentImage = config.currentImage,
+           let v = self.subviews.first as? UIImageView {
+            v.frame = self.bounds
+            v.image = currentImage
         }
     }
 }
