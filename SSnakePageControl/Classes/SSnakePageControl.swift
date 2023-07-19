@@ -103,7 +103,7 @@ private extension SSnakePageControl {
         }
         var currPointViewY = startY
         if config.currentSize.height < config.normalSize.height {
-            currPointViewY += (config.currentSize.height - config.normalSize.height) * 0.5
+            currPointViewY -= (config.currentSize.height - config.normalSize.height) * 0.5
         }
         
         // 创建点

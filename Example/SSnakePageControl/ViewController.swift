@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     private lazy var width = view.frame.width
     private let height: CGFloat = 100
     private let numberOfPages: Int = 5
-    private let pageH: CGFloat = 20
+    private let pageH: CGFloat = 30
     
-    // 默认
+    // MARK: - 默认
     private lazy var scrollView1: UIScrollView = {
         return setupScrollView(orginY: 0)
     }()
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         v.numberOfPages = numberOfPages
         return v
     }()
-    // 长短不一
+    // MARK: - 长短不一，位置，颜色
     private lazy var scrollView2: UIScrollView = {
         return setupScrollView(orginY: 150)
     }()
@@ -35,8 +35,32 @@ class ViewController: UIViewController {
         let v = SSnakePageControl(frame: CGRect(x: 0, y: (150 + height), width: width, height: pageH))
         var config = SSnakePageConfig()
         config.postionType = .leftTop
-        config.currentSize = CGSize(width: 16, height: 16)
-        config.currentCornerRadius = 8
+        config.currentSize = CGSize(width: 24, height: 12)
+        config.currentCornerRadius = 4
+        config.spaces = 12
+        config.normalColor = UIColor.green
+        config.currentColor = UIColor.red
+        v.config = config
+        v.numberOfPages = numberOfPages
+        return v
+    }()
+    // MARK: - 图片
+    private lazy var scrollView3: UIScrollView = {
+        return setupScrollView(orginY: 300)
+    }()
+    private lazy var pageControl3: SSnakePageControl = {
+        let v = SSnakePageControl(frame: CGRect(x: 0, y: (300 + height), width: width, height: pageH))
+        var config = SSnakePageConfig()
+        config.normalColor = UIColor.clear
+        config.normalImage = UIImage(named: "normal")
+        config.normalSize = CGSize(width: 24, height: 24)
+        config.normalCornerRadius = 0
+        config.currentColor = UIColor.clear
+        config.currentImage = UIImage(named: "current")
+        config.currentSize = CGSize(width: 24, height: 14)
+        config.currentCornerRadius = 0
+        config.spaces = 12
+        config.postionType = .rightBottom
         v.config = config
         v.numberOfPages = numberOfPages
         return v
@@ -59,6 +83,8 @@ private extension ViewController {
         view.addSubview(pageControl1)
         view.addSubview(scrollView2)
         view.addSubview(pageControl2)
+        view.addSubview(scrollView3)
+        view.addSubview(pageControl3)
     }
     
     func setupScrollView(orginY: CGFloat) -> UIScrollView {
@@ -87,6 +113,8 @@ extension ViewController: UIScrollViewDelegate {
                 pageControl1.currentPage = showIndex
             case scrollView2:
                 pageControl2.currentPage = showIndex
+            case scrollView3:
+                pageControl3.currentPage = showIndex
             default:
                 break
         }
