@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     private lazy var pageControl2: SSnakePageControl = {
         let v = SSnakePageControl(frame: CGRect(x: 0, y: (150 + height), width: width, height: pageH))
         var config = SSnakePageConfig()
+        config.postionType = .leftTop
         config.currentSize = CGSize(width: 16, height: 16)
         config.currentCornerRadius = 8
         v.config = config

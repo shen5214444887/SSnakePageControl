@@ -97,11 +97,19 @@ private extension SSnakePageControl {
                 startX = bounds.width - maxWidth
                 startY = bounds.height - config.normalSize.height
         }
+        var otherPointViewY = startY
+        if config.currentSize.height > config.normalSize.height {
+            otherPointViewY += (config.currentSize.height - config.normalSize.height) * 0.5
+        }
+        var currPointViewY = startY
+        if config.currentSize.height < config.normalSize.height {
+            currPointViewY += (config.currentSize.height - config.normalSize.height) * 0.5
+        }
         
         // 创建点
         for page in 0..<numberOfPages {
             if page == 0 {
-                let currPointView = UIView(frame: CGRect(x: startX, y: startY, width: config.currentSize.width, height: config.currentSize.height))
+                let currPointView = UIView(frame: CGRect(x: startX, y: currPointViewY, width: config.currentSize.width, height: config.currentSize.height))
                 currPointView.tag = page + tagHead
                 
                 startX = CGRectGetMaxX(currPointView.frame) + config.spaces
@@ -119,7 +127,7 @@ private extension SSnakePageControl {
                 }
                 currPointView.setupCurrent(config: config)
             } else {
-                let otherPointView = UIView(frame: CGRect(x: startX, y: startY, width: config.normalSize.width, height: config.normalSize.height))
+                let otherPointView = UIView(frame: CGRect(x: startX, y: otherPointViewY, width: config.normalSize.width, height: config.normalSize.height))
                 otherPointView.tag = page + tagHead
                 
                 startX = CGRectGetMaxX(otherPointView.frame) + config.spaces
@@ -146,21 +154,23 @@ private extension SSnakePageControl {
               let newView = viewWithTag(new + tagHead) else {
             return
         }
+        let oldViewFrame = oldView.frame
+        let newViewFrame = newView.frame
         
         UIView.animate(withDuration: config.changeAnimateDuration) {
             // 单个滚动
-            var lx = oldView.frame.origin.x
+            var lx = oldViewFrame.origin.x
             if new < old {
                 lx += (self.config.currentSize.width - self.config.normalSize.width)
             }
-            oldView.frame = CGRect(x: lx, y: oldView.frame.origin.y, width: self.config.normalSize.width, height: self.config.normalSize.height)
+            oldView.frame = CGRect(x: lx, y: newViewFrame.origin.y, width: self.config.normalSize.width, height: self.config.normalSize.height)
             oldView.setupNormal(config: self.config)
             
-            var mx = newView.frame.origin.x
+            var mx = newViewFrame.origin.x
             if new > old {
                 mx -= (self.config.currentSize.width - self.config.normalSize.width)
             }
-            newView.frame = CGRect(x: mx, y: newView.frame.origin.y, width: self.config.currentSize.width, height: self.config.currentSize.height)
+            newView.frame = CGRect(x: mx, y: oldViewFrame.origin.y, width: self.config.currentSize.width, height: self.config.currentSize.height)
             newView.setupCurrent(config: self.config)
             
             // 越过点击
