@@ -46,4 +46,7 @@ class SSnakePageConfig: NSObject {
     
     /// 点的间距
     @objc var spaces: CGFloat = 4
+    
+    /// 切换时候的动画时间
+    @objc var changeAnimateDuration: TimeInterval = 0.2
 }
