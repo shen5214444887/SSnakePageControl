@@ -16,23 +16,22 @@ class ViewController: UIViewController {
     private let numberOfPages: Int = 5
     private let pageH: CGFloat = 30
     
-    // MARK: - 默认
-    private lazy var scrollView1: UIScrollView = {
+    private lazy var scrollView: UIScrollView = {
         return setupScrollView(orginY: 0)
     }()
+    // MARK: - 默认
     private lazy var pageControl1: SSnakePageControl = {
         let v = SSnakePageControl(frame: CGRect(x: 0, y: (0 + height), width: width, height: pageH))
+        v.backgroundColor = UIColor.random.withAlphaComponent(0.2)
         let config = SSnakePageConfig()
         v.config = config
         v.numberOfPages = numberOfPages
         return v
     }()
     // MARK: - 长短不一，位置，颜色
-    private lazy var scrollView2: UIScrollView = {
-        return setupScrollView(orginY: 150)
-    }()
     private lazy var pageControl2: SSnakePageControl = {
-        let v = SSnakePageControl(frame: CGRect(x: 0, y: (150 + height), width: width, height: pageH))
+        let v = SSnakePageControl(frame: CGRect(x: 0, y: (pageH + height), width: width, height: pageH))
+        v.backgroundColor = UIColor.random.withAlphaComponent(0.2)
         var config = SSnakePageConfig()
         config.postionType = .leftTop
         config.currentSize = CGSize(width: 24, height: 12)
@@ -45,11 +44,9 @@ class ViewController: UIViewController {
         return v
     }()
     // MARK: - 图片
-    private lazy var scrollView3: UIScrollView = {
-        return setupScrollView(orginY: 300)
-    }()
     private lazy var pageControl3: SSnakePageControl = {
-        let v = SSnakePageControl(frame: CGRect(x: 0, y: (300 + height), width: width, height: pageH))
+        let v = SSnakePageControl(frame: CGRect(x: 0, y: (pageH * 2 + height), width: width, height: pageH))
+        v.backgroundColor = UIColor.random.withAlphaComponent(0.2)
         var config = SSnakePageConfig()
         config.normalColor = UIColor.clear
         config.normalImage = UIImage(named: "normal")
@@ -65,11 +62,10 @@ class ViewController: UIViewController {
         v.numberOfPages = numberOfPages
         return v
     }()
-    private lazy var scrollView4: UIScrollView = {
-        return setupScrollView(orginY: 450)
-    }()
+    // MARK: - border
     private lazy var pageControl4: SSnakePageControl = {
-        let v = SSnakePageControl(frame: CGRect(x: 0, y: (450 + height), width: width, height: pageH))
+        let v = SSnakePageControl(frame: CGRect(x: 0, y: (pageH * 3 + height), width: width, height: pageH))
+        v.backgroundColor = UIColor.random.withAlphaComponent(0.2)
         var config = SSnakePageConfig()
         config.postionType = .center
         config.normalSize = CGSize(width: 12, height: 12)
@@ -99,16 +95,11 @@ private extension ViewController {
     func setupUI() {
         view.backgroundColor = .white
         
-        view.addSubview(scrollView1)
+        view.addSubview(scrollView)
+        
         view.addSubview(pageControl1)
-        
-        view.addSubview(scrollView2)
         view.addSubview(pageControl2)
-        
-        view.addSubview(scrollView3)
         view.addSubview(pageControl3)
-        
-        view.addSubview(scrollView4)
         view.addSubview(pageControl4)
     }
     
@@ -132,19 +123,10 @@ extension ViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let index = scrollView.contentOffset.x / scrollView.frame.size.width
         let showIndex = lroundf(Float(index))
-        
-        switch scrollView {
-            case scrollView1:
-                pageControl1.currentPage = showIndex
-            case scrollView2:
-                pageControl2.currentPage = showIndex
-            case scrollView3:
-                pageControl3.currentPage = showIndex
-            case scrollView4:
-                pageControl4.currentPage = showIndex
-            default:
-                break
-        }
+        pageControl1.currentPage = showIndex
+        pageControl2.currentPage = showIndex
+        pageControl3.currentPage = showIndex
+        pageControl4.currentPage = showIndex
     }
 }
 
