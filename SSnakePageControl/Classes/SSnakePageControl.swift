@@ -23,7 +23,6 @@ public class SSnakePageControl: UIView {
     /// 当前点所在下标
     @objc public var currentPage: Int = 0 {
         willSet(newValue) {
-            delegate?.pageControl(pageControl: self, didClick: newValue)
             if newValue == self.currentPage || newValue > numberOfPages {
                 return
             }
@@ -245,10 +244,13 @@ private extension SSnakePageControl {
     
     
     @objc func clickAction(_ recognizer: UITapGestureRecognizer) {
-        guard let v = recognizer.view else {
-            return
+        if let delegate = delegate {
+            guard let v = recognizer.view else {
+                return
+            }
+            let index = v.tag - tagHead
+            self.currentPage = index
+            delegate.pageControl(pageControl: self, didClick: index)
         }
-        let index = v.tag + tagHead
-        self.currentPage = index
     }
 }
